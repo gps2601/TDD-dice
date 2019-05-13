@@ -19,4 +19,9 @@ RSpec.describe Dice do
     roll_result = my_dice.roll
     expect(roll_result).to be_between(1,6)
   end
+
+  it "asks user how many dice they want to roll" do
+    expect(STDOUT).to receive(:puts).with('How many die?')
+    my_dice_game = Dice.new
+  end
 end
