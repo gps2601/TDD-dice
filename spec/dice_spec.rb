@@ -50,4 +50,16 @@ RSpec.describe Dice do
     roll_result = my_dice.roll
     expect(roll_result.class).to eq(Array)
   end
+
+  it "should return an array of size equal to the number of die for 1 die" do
+    my_dice = Dice.new(1)
+    roll_result = my_dice.roll
+    expect(roll_result.length).to eq(1)
+  end
+
+  it "should return an array of size equal to the number of die for multiple" do
+    my_dice = Dice.new(6)
+    roll_result = my_dice.roll
+    expect(roll_result.length).to eq(6)
+  end
 end

@@ -7,6 +7,6 @@ class Dice
     end
   end
   def roll
-    [1]
+    [1] * @die
   end
 end
