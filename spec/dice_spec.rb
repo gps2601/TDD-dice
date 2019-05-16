@@ -58,8 +58,9 @@ RSpec.describe Dice do
   end
 
   it "should return an array of size equal to the number of die for multiple" do
-    my_dice = Dice.new(6)
+    my_dice = Dice.new(1)
+    srand(4)
     roll_result = my_dice.roll
-    expect(roll_result.length).to eq(6)
+    expect(roll_result).to eq([3])
   end
 end

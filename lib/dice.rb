@@ -7,6 +7,11 @@ class Dice
     end
   end
   def roll
-    [1] * @die
+    die_results = []
+    die_scores = [1,2,3,4,5,6]
+    (1..@die).each do
+      die_results.push(die_scores.sample)
+    end
+    die_results
   end
 end
